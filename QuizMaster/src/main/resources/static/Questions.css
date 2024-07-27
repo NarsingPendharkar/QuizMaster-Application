@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+.container {
+  background-color: #fff; /* White container background */
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: center; /* Center text */
+}
+
+h1 {
+  color: #000; /* Black heading color */
+  font-size: 0.5em; /* Large heading size */
+  margin-bottom: 20px;
+}
+
+.time-left {
+  margin-bottom: 20px;
+}
+
+#timer {
+  font-size: 1.5em; /* Larger timer font size */
+  font-weight: bold; /* Bold timer text */
+  color: #f00; /* Red timer color */
+}
+
+.card {
+  background-color: #f0f0f0; /* Light gray card background */
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+}
+
+.card-header {
+  background-color: #e0e0e0; /* Slightly darker gray card header background */
+  border-radius: 5px 5px 0 0; /* Rounded top corners */
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.form-check-input {
+  margin-right: 5px; /* Space between radio button and label */
+}
+
+.form-check-label {
+  font-weight: normal; /* Normal weight for labels */
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.submit, .prev, .next {
+  background-color: #008CBA; /* Blue button background */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit:hover {
+  background-color: #0077cc; /* Darker blue on hover */
+}
+
+.prev:hover, .next:hover {
+  background-color: #0077cc; /* Darker blue on hover */
+}
+
+/* Style for the message */
+p {
+  color: red;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  .btn-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .submit, .prev, .next {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}

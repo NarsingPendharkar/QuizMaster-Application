@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"><head>
+  <title>Quiz App</title>
+  
+  <style>
+   /* General Body Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #343a40; /* Dark background */
+  padding: 1rem;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar .auth-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar .auth-buttons a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar .auth-buttons button {
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 0.35rem;
+}
+
+.navbar .auth-buttons button:hover {
+  background-color: #0056b3; /* Darker primary color on hover */
+}
+
+.navbar .auth-buttons form {
+  display: inline;
+}
+
+/* Container Styles */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh; /* Adjust height as needed */
+  background-image: linear-gradient(to bottom, #66ebf0, #007bff);
+  background-size: cover;
+  text-align: center;
+  position: relative;
+}
+
+/* Start Button Styles */
+.start-button {
+  background-color: #28a745; /* Bootstrap success color */
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.start-button:hover {
+  background-color: #218838; /* Darker green color on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Optional: Centered text in the container */
+.container h1 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Background Image Styles */
+@media (max-width: 768px) {
+  .container {
+    height: 60vh; /* Adjust height for smaller screens */
+  }
+}
+
+  </style>
+  
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">Quiz App</div>
+    <div class="auth-buttons">
+      <th:block th:if="${username == null}">
+        <a href="/login"><button>Login</button></a>
+      </th:block>
+      <th:block th:if="${username != null}">
+        <span>Welcome, <span th:text="${username}"></span></span>
+        <form th:action="@{/logout}" method="get">
+          <button type="submit">Logout</button>
+        </form>
+      </th:block>
+    </div>
+  </nav>
+  
+  <div class="container">
+    <form action="/startquiz" method="get">
+        <button class="start-button" type="submit">Start Quiz</button>
+    </form>
+   
+  </div>
+  
+
+  <script>
+  
+  </script>
+</body>
+
+</html>
