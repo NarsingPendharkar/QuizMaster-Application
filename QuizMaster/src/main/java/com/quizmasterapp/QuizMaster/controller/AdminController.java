@@ -29,12 +29,12 @@ public class AdminController {
 	@Autowired
 	private Userservice userservice;
 
-	@GetMapping("/home")
+	@GetMapping("/")
     public String home(HttpSession session, Model model) {
         String username = (String) session.getAttribute("username");
         if (username != null) {
             model.addAttribute("username", username);
-            return "home";
+            return "Home";
         } else {
             return "redirect:/login"; // Redirect to login if not logged in
         }

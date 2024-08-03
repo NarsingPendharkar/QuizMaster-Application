@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:th="http://www.thymeleaf.org"><head>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
   <title>Quiz App</title>
   
   <style>
@@ -57,7 +58,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh; /* Adjust height as needed */
+  height: 100vh; /* Adjust height as needed */
   background-image: linear-gradient(to bottom, #66ebf0, #007bff);
   background-size: cover;
   text-align: center;
@@ -88,13 +89,14 @@ body {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
-
-/* Background Image Styles */
-@media (max-width: 768px) {
-  .container {
-    height: 60vh; /* Adjust height for smaller screens */
-  }
+button {
+	box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+		rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px
+		-79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+		rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+		rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
+/* Background Image Styles */
 
   </style>
   

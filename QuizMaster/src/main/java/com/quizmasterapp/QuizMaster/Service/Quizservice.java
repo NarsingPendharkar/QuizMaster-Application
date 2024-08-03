@@ -19,6 +19,9 @@ public class Quizservice {
 	public List<Question>startQuiz(){
 		return quizrepository.findAll();
 	}
+	public List<Question>totalQuestions(){
+		return quizrepository.findAll();
+	}
 
 	public Optional<Question> submitAnswer(Long qid) {
 		
